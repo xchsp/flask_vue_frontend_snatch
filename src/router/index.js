@@ -4,6 +4,7 @@ import HelloWorld from '@/components/HelloWorld'
 import Login from '@/pages/auth/Login';
 import Home from '@/pages/Home';
 const Register = () => import('@/pages/auth/Register');
+const PostDetail = () => import('@/pages/PostDetail');
 Vue.use(Router)
 
 export default new Router({
@@ -27,5 +28,10 @@ export default new Router({
       name: 'homePage',
       component: Home,
     },
+    {
+      path: '/postDetail/:id',
+      name: 'postDetailPage',
+      component: PostDetail
+    }
   ]
 })
